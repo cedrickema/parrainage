@@ -12,7 +12,7 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-public class Fenetre extends JFrame {
+public class PageDeFonctionalite extends JFrame {
 
 	/**
 	 * 
@@ -39,7 +39,7 @@ public class Fenetre extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public Fenetre() {
+	public PageDeFonctionalite() {
 		setBackground(new Color(255, 200, 0));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 623, 411);
@@ -54,7 +54,12 @@ public class Fenetre extends JFrame {
 			}
 		});
 		
-		JButton btnNewButton = new JButton("gestion des etudiants");
+		JButton boutonGestionEdutiant = new JButton("gestion des etudiants");
+		boutonGestionEdutiant.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+			}
+		});
 		
 		JButton btnNewButton_1 = new JButton("gestion des classes");
 		btnNewButton_1.addActionListener(new ActionListener() {
@@ -63,13 +68,14 @@ public class Fenetre extends JFrame {
 		});
 		
 		JButton btnNewButton_2 = new JButton("gestion des filieres");
+		
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.LEADING)
 				.addGroup(gl_contentPane.createSequentialGroup()
 					.addGap(213)
 					.addGroup(gl_contentPane.createParallelGroup(Alignment.TRAILING, false)
-						.addComponent(btnNewButton, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+						.addComponent(boutonGestionEdutiant, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 						.addComponent(btnActualiser, Alignment.LEADING, GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE))
 					.addContainerGap(232, Short.MAX_VALUE))
 				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
@@ -85,13 +91,14 @@ public class Fenetre extends JFrame {
 					.addGap(19)
 					.addComponent(btnActualiser, GroupLayout.PREFERRED_SIZE, 42, GroupLayout.PREFERRED_SIZE)
 					.addGap(29)
-					.addComponent(btnNewButton, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)
+					.addComponent(boutonGestionEdutiant, GroupLayout.PREFERRED_SIZE, 32, GroupLayout.PREFERRED_SIZE)
 					.addGap(18)
 					.addComponent(btnNewButton_1, GroupLayout.PREFERRED_SIZE, 37, GroupLayout.PREFERRED_SIZE)
 					.addGap(28)
 					.addComponent(btnNewButton_2)
 					.addContainerGap(134, Short.MAX_VALUE))
 		);
+		
 		contentPane.setLayout(gl_contentPane);
 	}
 }

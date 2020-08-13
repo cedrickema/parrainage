@@ -89,7 +89,7 @@ public class Destination  {
 				String psd= txt_password.getText();
 				if(uname.equals("creche123") && psd.equals("narukota")) {
 					JOptionPane.showMessageDialog(fame1,"connexion r�ussir");
-					Fenetre c = new Fenetre();
+					PageDeFonctionalite c = new PageDeFonctionalite();
 					c.setVisible(true);
 					fame1.setVisible(false);
 				}else {
