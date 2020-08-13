@@ -2,6 +2,7 @@ package parrainage.scholaire.acteurs;
 
 public class Etudiant {
 
+	private int identifiant;
 	private String nom;
 	private String prenom;
 	private int matricule;
@@ -13,7 +14,8 @@ public class Etudiant {
 
 	}
 
-	public Etudiant(String nom, String prenom, int matricule, String sexe, int niveau, String filiere) {
+	public Etudiant(int identifiant, String nom, String prenom, int matricule, String sexe, int niveau, String filiere) {
+		this.setIdentifiant(identifiant);
 		this.nom = nom;
 		this.prenom = prenom;
 		this.matricule = matricule;
@@ -68,6 +70,14 @@ public class Etudiant {
 
 	public void setFiliere(String filiere) {
 		this.filiere = filiere;
+	}
+
+	public int getIdentifiant() {
+		return identifiant;
+	}
+
+	public void setIdentifiant(int identifiant) {
+		this.identifiant = identifiant;
 	}
 
 }

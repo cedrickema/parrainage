@@ -43,6 +43,7 @@ public class ManageurEtudiant {
 			ResultSet resultat = requeteApprete.executeQuery();
 			while (resultat.next()) {
 				Etudiant etudiant = new Etudiant();
+				etudiant.setIdentifiant(resultat.getInt("IDENTIFIANT"));
 				etudiant.setNom(resultat.getString("NOM"));
 				etudiant.setPrenom(resultat.getString("PRENOM"));
 				etudiant.setPrenom(resultat.getString("PRENOM"));
@@ -62,14 +63,26 @@ public class ManageurEtudiant {
 
 	public static void main(String args[]) {
 		ManageurEtudiant mgrEtudiant = new ManageurEtudiant();
-
-		mgrEtudiant.enregistrer(new Etudiant("Tchabat", "Cedric", 1, "M", 2, "TIC"));
+		
+		mgrEtudiant.enregistrer(appreterUnEtudiant());
 
 		List<Etudiant> liste = mgrEtudiant.ObtenirLaListDetudiant();
 
 		for (Etudiant etudiant : liste) {
 			System.out.println(etudiant.getNom() + "," + etudiant.getPrenom());
 		}
+	}
+
+	private static Etudiant appreterUnEtudiant() {
+		Etudiant etudiant = new Etudiant();
+		etudiant.setNom("Tchabat");
+		etudiant.setPrenom("test");
+		etudiant.setMatricule(1);
+		etudiant.setSexe("M");
+		etudiant.setNiveau(1);
+		etudiant.setFiliere("TIC");
+		
+		return etudiant;
 	}
 
 }
