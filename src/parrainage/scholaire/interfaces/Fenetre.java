@@ -27,7 +27,7 @@ public class Fenetre extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					PageDeFonctionalite frame = new PageDeFonctionalite();
+					Fenetre frame = new Fenetre();
 					frame.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
@@ -55,6 +55,7 @@ public class Fenetre extends JFrame {
 		});
 		
 		JButton btnNewButton = new JButton("gestion des etudiants");
+		
 		
 		JButton btnNewButton_1 = new JButton("gestion des classes");
 		btnNewButton_1.addActionListener(new ActionListener() {
