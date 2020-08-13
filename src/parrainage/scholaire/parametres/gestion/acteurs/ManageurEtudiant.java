@@ -60,6 +60,27 @@ public class ManageurEtudiant {
 
 		return listeDesEtudiants;
 	}
+	
+	public List<String> listEtudiantEnFonctionNiveauEtFiliere(int niveau, String filiere) {
+
+		List<String> listeDesEtudiants = new ArrayList<>();
+
+		String requeteObtentionListeEtudiant = "select * from ETUDIANT where niveau = "+niveau+" and filiere = '"+filiere+"'";
+
+		try {
+			PreparedStatement requeteApprete = baseDeDonnees.prepareStatement(requeteObtentionListeEtudiant);
+			ResultSet resultat = requeteApprete.executeQuery();
+			while (resultat.next()) {
+				String etudiant = resultat.getInt("IDENTIFIANT")+","+resultat.getString("NOM")+","+resultat.getString("PRENOM")+"\n";
+				listeDesEtudiants.add(etudiant);
+			}
+			System.out.println("liste retiree");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+
+		return listeDesEtudiants;
+	}
 
 	public static void main(String args[]) {
 		ManageurEtudiant mgrEtudiant = new ManageurEtudiant();

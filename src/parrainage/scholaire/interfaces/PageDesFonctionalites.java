@@ -23,6 +23,9 @@ public class PageDesFonctionalites extends javax.swing.JFrame {
         jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton1MouseClicked(evt);
+                AssigneUnParrain aup = new AssigneUnParrain();
+                aup.setTitle("Assigne un Parrain");
+                aup.setVisible(true);
             }
         });
         jButton1.addActionListener(new java.awt.event.ActionListener() {
