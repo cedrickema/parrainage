@@ -56,7 +56,6 @@ public class Fenetre extends JFrame {
 		
 		JButton btnNewButton = new JButton("gestion des etudiants");
 		
-		
 		JButton btnNewButton_1 = new JButton("gestion des classes");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
