@@ -15,6 +15,10 @@ public class AssigneUnParrain extends javax.swing.JFrame {
 
 	private String parrain;
 
+	private String identifiantParrain;
+
+	private String Identifiantfieule;
+
 	/**
 	 * Creates new form AssigneUnParrain
 	 */
@@ -219,17 +223,19 @@ public class AssigneUnParrain extends javax.swing.JFrame {
 	}
 
 	private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {
-		mgrParrainage.etablirUnParrainage(new Parrainage(Integer.parseInt(fieule), Integer.parseInt(parrain)));
+		mgrParrainage.etablirUnParrainage(new Parrainage(Integer.parseInt(Identifiantfieule),fieule, Integer.parseInt(identifiantParrain),parrain));
 	}
 
 	private void jList1MouseClicked(java.awt.event.MouseEvent evt) {
 		String jlist1selected = jList1.getSelectedValuesList().get(0);
-		fieule = jlist1selected.split(",")[0];
+		Identifiantfieule = jlist1selected.split(",")[0];
+		fieule =  jlist1selected.split(",")[1] + " "+ jlist1selected.split(",")[2];
 	}
 
 	private void jList2MouseClicked(java.awt.event.MouseEvent evt) {
 		String jlist2selected = jList2.getSelectedValuesList().get(0);
-		parrain = jlist2selected.split(",")[0];
+		identifiantParrain = jlist2selected.split(",")[0];
+		parrain =  jlist2selected.split(",")[1] + " "+  jlist2selected.split(",")[2];
 	}
 
 	private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {

@@ -41,7 +41,7 @@ public class PageDesFonctionalites extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setText("Gestion des Classes");
+        jButton3.setText("Vu des Parrainages");
         jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jButton3MouseClicked(evt);
@@ -54,6 +54,7 @@ public class PageDesFonctionalites extends javax.swing.JFrame {
                 jButton4MouseClicked(evt);
             }
         });
+        jButton4.setVisible(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,7 +102,9 @@ public class PageDesFonctionalites extends javax.swing.JFrame {
     }                                     
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {                                      
-        // TODO add your handling code here:
+        VuDesParrainages vup = new VuDesParrainages();
+        vup.setTitle("Vu des parrainages");
+        vup.setVisible(true);
     }                                     
 
     private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {                                      
